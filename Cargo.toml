@@ -1,0 +1,19 @@
+[package]
+name = "solana_contract_proxy"
+version = "0.1.0"
+edition = "2021"
+
+
+[lib]
+name = "solana_contract_proxy"
+crate-type = ["cdylib", "lib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+no-entrypoint = []
+default = []
+
+[dependencies]
+ore = { version = "1.2.1", package = "ore-program" ,features = ["no-entrypoint"]}
+solana-program = "1.18.10"
